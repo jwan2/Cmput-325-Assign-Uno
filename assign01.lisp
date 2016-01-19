@@ -2,10 +2,10 @@
 ;QUESTION ONE
 
 	(defun xmember (X Y)
-		      (if (equal X (car Y))
-			  t
-			(xmember (X (cdr Y)))
-		      )
+		(cond
+			((null Y) nil)
+			((equal X (car Y)) T)
+			(t(xmember X (cdr Y)))
 	)
 		      
 			
