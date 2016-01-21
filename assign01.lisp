@@ -6,6 +6,7 @@
 			((null Y) nil)
 			((equal X (car Y)) T)
 			(t(xmember X (cdr Y)))
+		)
 	)
 
 
