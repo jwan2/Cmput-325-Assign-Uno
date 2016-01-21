@@ -32,7 +32,7 @@
 	(defun mix (L1 L2)
 		(if (null (and L1 L2))
 			nil
-			(cons ((car L1) (car L2))
+			(cons (car L1) (car L2))
 				(mix (cdr L1) (cdr L2))
 				)
 		)
