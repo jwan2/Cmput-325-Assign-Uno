@@ -7,10 +7,10 @@
 			((equal X (car Y)) T)
 			(t(xmember X (cdr Y)))
 	)
-;
-;
+
+
 ;QUESTION TWO
-;
+
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
