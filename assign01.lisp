@@ -30,10 +30,11 @@
 ;QUESTION THREE
 
 	(defun mix (L1 L2)
-		(if (null (and L1 L2))
-			nil
-			(append 
-				(list (car L1) (car L2)
+		(cond
+			((null L2) L1)
+			((null L1) L2)
+			(t(append 
+				(list (car L1) (car L2))
 					(mix (cdr L1) (cdr L2))
 				)
 			)
