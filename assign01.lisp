@@ -31,7 +31,8 @@
 
 	(defun mix (L1 L2)
 		(if (null (and L1 L2))
-			(list (list (car L1) (car L2))
+			nil
+			(list (car L1) (car L2)
 				(mix (cdr L1) (cdr L2))
 				)
 		)
