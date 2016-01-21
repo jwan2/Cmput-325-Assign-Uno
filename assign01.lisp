@@ -11,7 +11,6 @@
 
 
 ;QUESTION TWO
-
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
@@ -24,5 +23,19 @@
 				(flatten (car x))
 				(flatten (cdr x)))
 			)
+		)
+	)
+
+
+;QUESTION THREE
+
+	(defun mix (L1 L2)
+		(if (null L)
+			nil
+			(cons (cons L1 (cons L2 nil))
+				(mix (cdr L1) (cdr L2))
+				)
+
+
 		)
 	)
