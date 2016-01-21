@@ -21,9 +21,8 @@
 					(flatten (cdr x)))
 			)
 			(t(append
-				flatten (car x))
-				flatten (cdr x))
-
+				(flatten (car x))
+				(flatten (cdr x)))
+			)
 		)
-
 	)
