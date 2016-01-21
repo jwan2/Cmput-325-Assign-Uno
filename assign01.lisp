@@ -30,12 +30,10 @@
 ;QUESTION THREE
 
 	(defun mix (L1 L2)
-		(if (null L)
+		(if (null (and L1 L2))
 			nil
 			(cons (cons L1 (cons L2 nil))
 				(mix (cdr L1) (cdr L2))
 				)
-
-
 		)
 	)
