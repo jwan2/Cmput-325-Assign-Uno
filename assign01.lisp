@@ -55,7 +55,7 @@
 					(list (cdr L))
 				)
 			)
-			(t (cons 
+			(t(cons 
 				(cons 
 					(car L)
 					(car (split (cddr L)))
