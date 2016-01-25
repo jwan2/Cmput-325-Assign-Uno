@@ -41,7 +41,7 @@
 		)
 	)
 
-;QUESTION 4
+;QUESTION FOUR
 	
 	(defun split (L)
 		(cond 
@@ -71,3 +71,31 @@
 		)
 
 	)
+
+
+;QUESTION FIVE
+
+
+;QUESTION SIX
+
+	(defun subsetsum (L S)
+		(cond 
+			((null L) nil)
+			((> (car L) S)
+				(subsetsum (cdr L) S)
+			)
+			((= (car L) S)
+				;cons (car L) ()))
+				(cons (car L))
+			)
+			((< (car L) S)
+				(if (null (subsetsum (cdr L) (- s (car L))))
+					(subsetsum (cdr L) S)
+					(cons (car L) (subsetsum (cdr L) (- S (car L))))
+				)
+
+			)
+		)
+	)
+
+
