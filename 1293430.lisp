@@ -100,7 +100,13 @@
 	)
 
 ;QUESTION FIVE
-;Need documentation about each function
+;5.1 Let L1 and L2 be lists. Is it always true that (split (mix L1 L2)) returns the list (L1 L2).
+
+
+
+;5.2 Let L be a list. Is it always true that (mix (car (split L))(cadr (split L))) returns L.
+
+
 
 
 ;QUESTION SIX
