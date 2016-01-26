@@ -1,6 +1,9 @@
-;Starting assignment One
+;ASSIGNMENT ONE
+;NAME: SONOLA SOWEMIMO
+;CLASS: CMPUT 325
+;ID: 1293430
+
 ;QUESTION ONE
-;
 	(defun xmember (X Y)
 		(cond
 			((null Y) nil)
@@ -8,7 +11,6 @@
 			(t(xmember X (cdr Y)))
 		)
 	)
-
 
 ;QUESTION TWO
 	(defun flatten (X)
@@ -26,9 +28,7 @@
 		)
 	)
 
-
 ;QUESTION THREE
-
 	(defun mix (L1 L2)
 		(cond
 			((null L2) L1)
@@ -42,7 +42,6 @@
 	)
 
 ;QUESTION FOUR
-	
 	(defun split (L)
 		(cond 
 			((null L) '(nil nil))
@@ -71,13 +70,11 @@
 		)
 
 	)
-
-
+		
 ;QUESTION FIVE
 
 
 ;QUESTION SIX
-
 	(defun subsetsum (L S)
 		(cond 
 			((null L) nil)
@@ -97,5 +94,3 @@
 			)
 		)
 	)
-
-
