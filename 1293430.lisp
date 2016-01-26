@@ -64,7 +64,12 @@
 	)
 
 ;QUESTION FOUR
-;Need documentation about each function
+; Splits elements  of L into a list of two sublists (L1 L2), by putting elements from L into L1 and L2 alternatingly
+;	Example:
+;	(split '(1 2 3 4 5 6)) --> ((1 3 5) (2 4 6))
+;	(split '((a) (b c) (d e f) g h)) --> ((a) (d e f) f) ((b c) g))
+;	(split '()) --> (nil nil) 
+
 	(defun split (L)
 		(cond 
 			((null L) '(nil nil))
