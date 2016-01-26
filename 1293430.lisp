@@ -4,6 +4,14 @@
 ;ID: 1293430
 
 ;QUESTION ONE
+; The function returns T if argument X is a member of the argument list Y and NIL otherwise. This should
+; also test for lists being members of lists. Both the argument X and the list Y may be NIL or lists containing NIL.
+;	Examples: 
+;	(xmember '1 '(1)) --> T
+;	(xmember '1 '( (1) 2 3)) --> NIL
+;	(xmember '(1) '((1) 2 3)) --> NIL
+;	(xmember nil nil) --> NIL
+
 	(defun xmember (X Y)
 		(cond
 			((null Y) nil)
@@ -13,6 +21,7 @@
 	)
 
 ;QUESTION TWO
+;Need documentation about each function
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
@@ -29,6 +38,7 @@
 	)
 
 ;QUESTION THREE
+;Need documentation about each function
 	(defun mix (L1 L2)
 		(cond
 			((null L2) L1)
@@ -42,6 +52,7 @@
 	)
 
 ;QUESTION FOUR
+;Need documentation about each function
 	(defun split (L)
 		(cond 
 			((null L) '(nil nil))
@@ -70,11 +81,13 @@
 		)
 
 	)
-		
+
 ;QUESTION FIVE
+;Need documentation about each function
 
 
 ;QUESTION SIX
+;Need documentation about each function
 	(defun subsetsum (L S)
 		(cond 
 			((null L) nil)
