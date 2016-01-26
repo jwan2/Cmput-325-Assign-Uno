@@ -21,7 +21,13 @@
 	)
 
 ;QUESTION TWO
-;Need documentation about each function
+; Where the arugment x is a list with sublists nested to any depth, such that the resuly of (flatten x) is just a list of atoms with the property
+; all the atoms appearing in the x also appear in (flatten x) and in the same order. Make assumption: NIL & () will not appear in list x
+;	Examples:
+;	(flatten '(a (b c) d)) --> (a b c d)
+;	(flatten '((((a))))) --> (a)
+;	(flatten '(a (b c) (d ((e)) f))) --> (a b c d e f)
+
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
