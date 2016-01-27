@@ -13,6 +13,13 @@
 	(xmember '1 '( (1) 2 3)) --> NIL
 	(xmember '(1) '((1) 2 3)) --> NIL
 	(xmember nil nil) --> NIL 
+
+	If (null Y) checking base argument, base case of if list Y is empty
+		returns nil
+	else if (equal X (first argument of list Y)) else if the first argument in the list Y, to see if its equals X, returns true 
+		returns true
+	else xmember (x (2nd to last arguments of list Y)) else remove the first argument in list Y, and send it into the function (recursion)
+
 |#
 
 	(defun xmember (X Y)
