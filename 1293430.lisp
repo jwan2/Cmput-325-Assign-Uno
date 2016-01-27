@@ -99,12 +99,34 @@
 	)
 
 ;QUESTION FIVE
-;5.1 Let L1 and L2 be lists. Is it always true that (split (mix L1 L2)) returns the list (L1 L2).
+#|
+	5.1 Let L1 and L2 be lists. Is it always true that (split (mix L1 L2)) returns the list (L1 L2).
 
+	ANSWER: FALSE, it is not always true you will get the same (L1 L2) list. A perfect example to 
+	disprove this will be simply making one of the list null. Odds are you'll receive the same list
+	if neither are null. If one of the list is null you are bound to receive a seperate list where the
+	list that isn't null is split between both lists evenly.
+|#
 
+#|
+	5.2 Let L be a list. Is it always true that (mix (car (split L))(cadr (split L))) returns L.
 
-;5.2 Let L be a list. Is it always true that (mix (car (split L))(cadr (split L))) returns L.
+	ANSWER: TRUE, 
+	L = (A B C D)
+	(mix (car (split L)) (cadr (split L)))
 
+	(split L) --> ((A C) (B D))
+	
+	(car (split L)) --> (A C)
+	(cadr (split L)) --> (B D)
+
+	(mix (A C) (B D)) --> (A B C D)
+	qed
+
+	Breaking this down you realize we simply take a list, split it up into two and take the first
+	list and second list and mix it back together so no doubt we are bound to get the same list back.
+
+|#
 
 
 
