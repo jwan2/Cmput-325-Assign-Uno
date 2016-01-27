@@ -1,16 +1,19 @@
-;ASSIGNMENT ONE
-;NAME: SONOLA SOWEMIMO
-;CLASS: CMPUT 325
-;ID: 1293430
+#|	ASSIGNMENT ONE
+	NAME: SONOLA SOWEMIMO
+	CLASS: CMPUT 325
+	ID: 1293430
+|#
 
 ;QUESTION ONE
-; The function returns T if argument X is a member of the argument list Y and NIL otherwise. This should
-; also test for lists being members of lists. Both the argument X and the list Y may be NIL or lists containing NIL.
-;	Examples: 
-;	(xmember '1 '(1)) --> T
-;	(xmember '1 '( (1) 2 3)) --> NIL
-;	(xmember '(1) '((1) 2 3)) --> NIL
-;	(xmember nil nil) --> NIL
+#| 
+ The function returns T if argument X is a member of the argument list Y and NIL otherwise. This should
+ also test for lists being members of lists. Both the argument X and the list Y may be NIL or lists containing NIL.
+	Examples: 
+	(xmember '1 '(1)) --> T
+	(xmember '1 '( (1) 2 3)) --> NIL
+	(xmember '(1) '((1) 2 3)) --> NIL
+	(xmember nil nil) --> NIL 
+|#
 
 	(defun xmember (X Y)
 		(cond
@@ -20,13 +23,15 @@
 		)
 	)
 
-;QUESTION TWO
-; Where the arugment x is a list with sublists nested to any depth, such that the resuly of (flatten x) is just a list of atoms with the property
-; all the atoms appearing in the x also appear in (flatten x) and in the same order. Make assumption: NIL & () will not appear in list x
-;	Examples:
-;	(flatten '(a (b c) d)) --> (a b c d)
-;	(flatten '((((a))))) --> (a)
-;	(flatten '(a (b c) (d ((e)) f))) --> (a b c d e f)
+; QUESTION TWO
+ #|
+ Where the arugment x is a list with sublists nested to any depth, such that the resuly of (flatten x) is just a list of atoms with the property
+ all the atoms appearing in the x also appear in (flatten x) and in the same order. Make assumption: NIL & () will not appear in list x
+	Examples:
+	(flatten '(a (b c) d)) --> (a b c d)
+	(flatten '((((a))))) --> (a)
+	(flatten '(a (b c) (d ((e)) f))) --> (a b c d e f)
+|#
 
 	(defun flatten (X)
 		(cond 
@@ -125,7 +130,6 @@
 
 	Breaking this down you realize we simply take a list, split it up into two and take the first
 	list and second list and mix it back together so no doubt we are bound to get the same list back.
-
 |#
 
 
@@ -145,14 +149,17 @@
 	(defun subsetsum (L S)
 		(cond 
 			((null L) nil)
+
 			((> (car L) S)
 				(subsetsum (cdr L) S)
 			)
+
 			((= (car L) S)
 				(cons (car L) ()))
 				;(cons (car L))
+
 			((< (car L) S)
-				(if (null (subsetsum (cdr L) (- s (car L))))
+				(if (null (subsetsum (cdr L) (- S (car L))))
 					(subsetsum (cdr L) S)
 					(cons (car L) (subsetsum (cdr L) (- S (car L))))
 				)
