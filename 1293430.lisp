@@ -108,16 +108,17 @@
 
 
 
-;QUESTION SIX
-; Write a lisp function to solve the subset sum problem: given a list of numbers L and a sum S, find a subset of the numbers
-; n1 ... nk should be in the same order as they appear in L. The resuly should be nil if the problem has no solution. Just pick 
-; one valid solution. 
-;	Examples:
-;	(subsetsum '(1 2 3) 5) --> (2 3)
-;	(subsetsum '(1 5 3) 2) --> nil
-;	(subsetsum '(1 16 2 8 4) 29) --> (1 16 8 4)
-;	(subsetsum '(1 1 5 6 8) 10) --> (1 1 8)
-;	(subsetsum '(1 10 100 1000 10000) 5) --> nil
+#| QUESTION SIX
+ Write a lisp function to solve the subset sum problem: given a list of numbers L and a sum S, find a subset of the numbers
+ n1 ... nk should be in the same order as they appear in L. The resuly should be nil if the problem has no solution. Just pick 
+ one valid solution. 
+	Examples:
+	(subsetsum '(1 2 3) 5) --> (2 3)
+	(subsetsum '(1 5 3) 2) --> nil
+	(subsetsum '(1 16 2 8 4) 29) --> (1 16 8 4)
+	(subsetsum '(1 1 5 6 8) 10) --> (1 1 8)
+	(subsetsum '(1 10 100 1000 10000) 5) --> nil 
+|#
 
 	(defun subsetsum (L S)
 		(cond 
