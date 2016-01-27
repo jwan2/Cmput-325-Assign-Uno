@@ -38,16 +38,22 @@
 	(flatten '(a (b c) d)) --> (a b c d)
 	(flatten '((((a))))) --> (a)
 	(flatten '(a (b c) (d ((e)) f))) --> (a b c d e f)
+
+	if (null X) 
+		returns nil
+	else if ()
 |#
 
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
+
 			((atom (car x))
 					(append
 					(list (car x))
 					(flatten (cdr x)))
 			)
+
 			(t(append 
 				(flatten (car x)) 
 				(flatten (cdr x)))
