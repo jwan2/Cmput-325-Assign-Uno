@@ -82,18 +82,18 @@
 					(list (cdr L))
 				)
 			)
-			(t(cons 
+			(t (cons 
 				(cons 
 					(car L)
 					(car (split (cddr L)))
 				)
 				(list 
 					(cons
-						(car (cdr L)
+						(car (cdr L))
 							(car (cdr (split (cddr L))))
 						)
 					)
-				))
+				)
 			)
 		)
 	)
