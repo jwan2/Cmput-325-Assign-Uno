@@ -39,19 +39,23 @@
 	(flatten '((((a))))) --> (a)
 	(flatten '(a (b c) (d ((e)) f))) --> (a b c d e f)
 
-	if (null X) 
+	if (null X) checking base argument, base case is empty return nil
 		returns nil
-	else if ()
+	else if (oftypeatom(x))	checking argument of if first element is a single argument, not a nested list, and send rest to be flattened
+		return add to output list + flatten(send rest of list, excluding first element X
+	else
+		return (append (flatten(first element) + flatten(rest of elements))) if a nested list send 
+
 |#
 
 	(defun flatten (X)
 		(cond 
 			((null X) nil)
 
-			((atom (car x))
+			((atom (car X))
 					(append
-					(list (car x))
-					(flatten (cdr x)))
+					(list (car X))
+					(flatten (cdr X)))
 			)
 
 			(t(append 
