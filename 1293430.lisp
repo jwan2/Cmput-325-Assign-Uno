@@ -66,17 +66,29 @@
 	)
 
 ;QUESTION THREE
-; Mixes the elements of L1 and L2 into a single list, by choosing elements from L1 and L2 alternatingly. If one list is shorter than the
-; other, then append all elements from the longer list at the end.
-;	Exmaples:
-;	(mix '(a b c) '(d e f)) --> (a d b e c f)
-;	(mix '(1 2 3') '(a)) --> (1 a 2 3)
-;	(mix '((a) (b c)) '(d e f g h)) --> ((a) d (b c) e f g h)
+#| 
+ Mixes the elements of L1 and L2 into a single list, by choosing elements from L1 and L2 alternatingly. If one list is shorter than the
+ other, then append all elements from the longer list at the end.
+	Exmaples:
+	(mix '(a b c) '(d e f)) --> (a d b e c f)
+	(mix '(1 2 3') '(a)) --> (1 a 2 3)
+	(mix '((a) (b c)) '(d e f g h)) --> ((a) d (b c) e f g h)
+
+	if ( L2 is empty) 
+		return L1
+	else if ( L1 is empty)
+		return L2
+	else 
+		append (first element in L1 & first element in L2)
+		mix (rest element in L1 & rest element in l2)
+|#
 
 	(defun mix (L1 L2)
 		(cond
 			((null L2) L1)
+
 			((null L1) L2)
+
 			(t(append 
 				(list (car L1) (car L2)) 
 				(mix (cdr L1) (cdr L2))
