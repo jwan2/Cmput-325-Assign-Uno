@@ -45,7 +45,6 @@
 		return add to output list + flatten(send rest of list, excluding first element X
 	else
 		return (append (flatten(first element) + flatten(rest of elements))) if the whole list is a nested list send it all to be broken down
-
 |#
 
 	(defun flatten (X)
@@ -80,7 +79,7 @@
 		return L2
 	else 
 		append (first element in L1 & first element in L2)	combine first element in L1 and first element in L2
-		mix (rest element in L1 & rest element in l2)		send the rest of element in L1 and rest of elements in L2 in recursion
+		mix (rest element in L1 & rest element in l2)	send the rest of element in L1 and rest of elements in L2 in recursion
 |#
 
 	(defun mix (L1 L2)
@@ -104,6 +103,14 @@
 	(split '(1 2 3 4 5 6)) --> ((1 3 5) (2 4 6))
 	(split '((a) (b c) (d e f) g h)) --> ((a) (d e f) f) ((b c) g))
 	(split '()) --> (nil nil) 
+
+	if (list is empty)
+		return (nil nil)
+
+	else if ()
+
+	else 
+
 |#
 
 	(defun split (L)
@@ -119,7 +126,7 @@
 					(list (cdr L))
 				)
 			)
-			
+
 			(t (cons 
 				(cons 
 					(car L)
