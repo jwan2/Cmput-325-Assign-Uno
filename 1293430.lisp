@@ -104,13 +104,6 @@
 	(split '((a) (b c) (d e f) g h)) --> ((a) (d e f) f) ((b c) g))
 	(split '()) --> (nil nil) 
 
-	if (list is empty)
-		return (nil nil)
-
-	else if ()
-
-	else 
-
 |#
 
 	(defun split (L)
