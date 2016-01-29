@@ -74,13 +74,13 @@
 	(mix '(1 2 3') '(a)) --> (1 a 2 3)
 	(mix '((a) (b c)) '(d e f g h)) --> ((a) d (b c) e f g h)
 
-	if ( L2 is empty) 
+	if ( L2 is empty)	checks to see if second list is empty then return first list
 		return L1
-	else if ( L1 is empty)
+	else if ( L1 is empty)	checks to see if first list is empty then return second list
 		return L2
 	else 
-		append (first element in L1 & first element in L2)
-		mix (rest element in L1 & rest element in l2)
+		append (first element in L1 & first element in L2)	combine first element in L1 and first element in L2
+		mix (rest element in L1 & rest element in l2)		send the rest of element in L1 and rest of elements in L2 in recursion
 |#
 
 	(defun mix (L1 L2)
