@@ -151,6 +151,9 @@
 	disprove this will be simply making one of the list null. Odds are you'll receive the same list
 	if neither are null. If one of the list is null you are bound to receive a seperate list where the
 	list that isn't null is split between both lists evenly.
+
+	Also the condition of having one list longer than the other with two items, will also provide us with the case of 
+	both lists not being the same as initial started.
 |#
 
 #|
