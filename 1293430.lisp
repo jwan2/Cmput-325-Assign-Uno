@@ -184,6 +184,17 @@
 	(subsetsum '(1 16 2 8 4) 29) --> (1 16 8 4)
 	(subsetsum '(1 1 5 6 8) 10) --> (1 1 8)
 	(subsetsum '(1 10 100 1000 10000) 5) --> nil 
+
+	if (list empty)
+		return nil
+	else if (first item in list > sum)
+		return (subsetsum(rest of list) sum)
+	else if (first item in list == sum)
+
+	else if (first item in list < sum)
+		if (subsetsum(rest item in list) && (sum - first item in list) == null)
+			return (subsetsum(rest of list) sum)
+			return (subsetsum(rest of list) (sum - first item in list))
 |#
 
 	(defun subsetsum (L S)
