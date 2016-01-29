@@ -44,7 +44,7 @@
 	else if (oftypeatom(x))	checking argument of if first element is a single argument, not a nested list, and send rest to be flattened
 		return add to output list + flatten(send rest of list, excluding first element X
 	else
-		return (append (flatten(first element) + flatten(rest of elements))) if a nested list send 
+		return (append (flatten(first element) + flatten(rest of elements))) if the whole list is a nested list send it all to be broken down
 
 |#
 
